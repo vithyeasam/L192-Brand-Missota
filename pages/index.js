@@ -1,5 +1,13 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebookF,
+  faInstagram,
+  faPinterestP,
+  faTumblr,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   return (
@@ -39,11 +47,11 @@ export default function Home() {
               JACKETS
             </a>
           </div>
-          <div className={styles.piccontainer}>
-            <div>
-              <img className={styles.pic} src="/intro-model.jpg" />
+          <div>
+            <div className={styles.pic}>
+              <img  src="/intro-model.jpg" />
             </div>
-            <div>
+            <div className={styles.second}>
               <img src="/left-model1.jpg" />
               <img src="/right-model1.jpg" />
             </div>
@@ -64,11 +72,11 @@ export default function Home() {
                 <img src="/product2.jpg" />
                 <span className={styles.caption}>
                   <p style={{ color: "#F08080" }}>
-                    <b>Elegant, Women</b>
+                    <b>Clothes, Dresses, Elegant, Women</b>
                   </p>
-                  <p>Gold Ring</p>
+                  <p>Pastel Dress</p>
                   <p>
-                    <b>$345.00</b>
+                    <b>$215.00</b>
                   </p>
                 </span>
               </div>
@@ -110,38 +118,38 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <div className={styles.product}>
+              <div className={styles.product1}>
                 <img src="/category1.jpg" />
               </div>
-              <div className={styles.product}>
+              <div className={styles.product1}>
                 <img src="/category2.jpg" />
               </div>
-              <div className={styles.product}>
+              <div className={styles.product1}>
                 <img src="/category3.jpg" />
               </div>
             </div>
             <div>
-              <div className={styles.product}>
+              <div className={styles.product1}>
                 <img src="/category4.jpg" />
-                <span>
+                <span className={styles.d}>
                   <h2>
                     <b>DRESSES</b>
                   </h2>
                   <p>New color dresses for every occasion</p>
                 </span>
               </div>
-              <div className={styles.product}>
+              <div className={styles.product1}>
                 <img src="/category5.jpg" />
-                <span>
+                <span className={styles.d}>
                   <h2>
                     <b>SHOES</b>
                   </h2>
                   <p>New color shoes for every occasion</p>
                 </span>
               </div>
-              <div className={styles.product}>
+              <div className={styles.product1}>
                 <img src="/category6.jpg" />
-                <span>
+                <span className={styles.d}>
                   <h2>
                     <b>ACCESSORIES</b>
                   </h2>
@@ -151,55 +159,57 @@ export default function Home() {
             </div>
             <div style={{ margin: "80px 0" }}>
               <div className={styles.categorylink}>
-                <a
-                  href="https://www.l192.com/"
-                >
+                <a href="https://www.l192.com/">
                   GET OUR LATEST PRODUCTS FROM L192.COM
                 </a>
               </div>
             </div>
           </div>
+          <footer>
+            <div className={styles.categoryfooter}>
+              <div className={styles.iconbar1}>
+                <a className={styles.category1} href="/">
+                  WHAT'S NEW
+                </a>
+                <a className={styles.category1} href="/">
+                  HOME
+                </a>
+                <a className={styles.category1} href="/">
+                  DRESS
+                </a>
+                <a className={styles.category1} href="/">
+                  SHOES
+                </a>
+                <a className={styles.category1} href="/">
+                  JUMPSUITS
+                </a>
+                <a className={styles.category1} href="/">
+                  ACCESSORIES
+                </a>
+                <a className={styles.category1} href="/">
+                  JACKETS
+                </a>
+              </div>
+              <div className={styles.iconbar}>
+                <FontAwesomeIcon
+                  className={styles.iconicon}
+                  icon={faInstagram}
+                />
+                <FontAwesomeIcon className={styles.iconicon} icon={faTwitter} />
+                <FontAwesomeIcon
+                  className={styles.iconicon}
+                  icon={faFacebookF}
+                />
+                <FontAwesomeIcon
+                  className={styles.iconicon}
+                  icon={faPinterestP}
+                />
+                <FontAwesomeIcon className={styles.iconicon} icon={faTumblr} />
+              </div>
+            </div>
+          </footer>
         </div>
       </main>
-
-      <footer style={{ margin: "80px 0" }}>
-        <div className={styles.categoryfooter}>
-          <div className={styles.footercontainer}>
-            <h2 style={{ color: "#424949" }}>SUBCRIBE TO NEWSLETTER</h2>
-            <input type="text" placeholder="E-mail address"></input>
-            <input type="submit"></input>
-          </div>
-          <div>
-            <a className={styles.category1} href="/">
-              WHAT'S NEW
-            </a>
-            <a
-              className={styles.category1}
-              href="/"
-            >
-              HOME
-            </a>
-            <a className={styles.category1} href="/">
-              DRESS
-            </a>
-            <a className={styles.category1} href="/">
-              SHOES
-            </a>
-            <a className={styles.category1} href="/">
-              JUMPSUITS
-            </a>
-            <a className={styles.category1} href="/">
-              ACCESSORIES
-            </a>
-            <a className={styles.category1} href="/">
-              JACKETS
-            </a>
-          </div>
-          <div>
-          <i class="fab fa-twitter"></i>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
