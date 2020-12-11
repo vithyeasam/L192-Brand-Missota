@@ -237,3 +237,15 @@ span.d {
     line-height: 100%;
   }
 }
+
+.iconbar {
+  display: flex;
+  justify-content: center;
+}
+
+.iconicon {
+  width: 12px;
+  height: 12px;
+  margin: 0 20px;
+}
+
