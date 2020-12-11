@@ -1,5 +1,13 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebookF,
+  faInstagram,
+  faPinterestP,
+  faTumblr,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   return (
@@ -151,9 +159,7 @@ export default function Home() {
             </div>
             <div style={{ margin: "80px 0" }}>
               <div className={styles.categorylink}>
-                <a
-                  href="https://www.l192.com/"
-                >
+                <a href="https://www.l192.com/">
                   GET OUR LATEST PRODUCTS FROM L192.COM
                 </a>
               </div>
@@ -162,21 +168,13 @@ export default function Home() {
         </div>
       </main>
 
-      <footer style={{ margin: "80px 0" }}>
+      <footer style={{ margin: "80px 0 0 0" }}>
         <div className={styles.categoryfooter}>
-          <div className={styles.footercontainer}>
-            <h2 style={{ color: "#424949" }}>SUBCRIBE TO NEWSLETTER</h2>
-            <input type="text" placeholder="E-mail address"></input>
-            <input type="submit"></input>
-          </div>
-          <div>
+          <div className={styles.iconbar}>
             <a className={styles.category1} href="/">
               WHAT'S NEW
             </a>
-            <a
-              className={styles.category1}
-              href="/"
-            >
+            <a className={styles.category1} href="/">
               HOME
             </a>
             <a className={styles.category1} href="/">
@@ -195,8 +193,12 @@ export default function Home() {
               JACKETS
             </a>
           </div>
-          <div>
-          <i class="fab fa-twitter"></i>
+          <div className={styles.iconbar}>
+            <FontAwesomeIcon className={styles.iconicon} icon={faInstagram}/>
+            <FontAwesomeIcon className={styles.iconicon}  icon={faTwitter}/>
+            <FontAwesomeIcon className={styles.iconicon}  icon={faFacebookF}/>
+            <FontAwesomeIcon className={styles.iconicon}  icon={faPinterestP}/>
+            <FontAwesomeIcon className={styles.iconicon}  icon={faTumblr}/>
           </div>
         </div>
       </footer>
