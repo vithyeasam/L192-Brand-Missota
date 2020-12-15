@@ -8,6 +8,7 @@ import {
   faTumblr,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { faBars, faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
@@ -19,7 +20,14 @@ export default function Home() {
 
       <main>
         <div className={styles.container}>
-          <img className={styles.misslogo} src="/logo-missota.svg" />
+          <div className={styles.logobar}>
+            <FontAwesomeIcon className={styles.iconicon1} icon={faBars} />
+            <img className={styles.misslogo} src="/logo-missota.svg" />
+            <FontAwesomeIcon
+              className={styles.iconicon1}
+              icon={faShoppingBag}
+            />
+          </div>
           <div className={styles.categorybar}>
             <a className={styles.category} href="/">
               WHAT'S NEW
@@ -49,11 +57,12 @@ export default function Home() {
           </div>
           <div>
             <div className={styles.pic}>
-              <img  src="/intro-model.jpg" />
+              <img src="/intro-model.jpg" />
             </div>
-            <div className={styles.second}>
-              <img src="/left-model1.jpg" />
-              <img src="/right-model1.jpg" />
+            <div className={styles.secondlayer}>
+              <img id={styles.rect} src="/left-model1.jpg" />
+
+              <img id={styles.rect1} src="/right-model1.jpg" />
             </div>
             <div className={styles.productcontainer}>
               <div className={styles.product}>
