@@ -1492,19 +1492,21 @@
     font-size: smaller;
   }
 
-  .productcontiner {
+  .productcontainer {
     display: flex;
     flex-direction: row;
+    width: 1024px;
+    margin: 0 auto;
   }
 
   .product {
-    margin: 35px 14px 0px 10px;
+    margin: 35px 10px 0px 15px;
     vertical-align: top;
     display: inline-block;
     text-align: center;
-    width: 180px;
+    width: 185px;
   }
-  .Home_product__3okLj img {min-width: 180px; width: 180px; border: 1px solid #000;}
+ 
   .product1 {
     margin: 35px 4px 0px 4px;
     vertical-align: top;
@@ -1513,8 +1515,10 @@
   }
   .caption {
     display: block;
-    text-align: left;
+    text-align: center;
     line-height: 100%;
+    font-size: 0.9em;
+    width: 175px;
   }
 
   .misslogo {
