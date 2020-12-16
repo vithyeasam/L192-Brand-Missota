@@ -20,11 +20,16 @@ export default function Home() {
 
       <main>
         <div className={styles.container}>
+          <div className={styles.appwrapper}>
+            <a href="https://l192.page.link/?link=https://www.l192.com&ibi=com.chlat.mbuy.app&apn=com.chlat.mbuy.app&isi=1105837827">
+              <img className={styles.appbanner} src="/bannerapp.png" />
+            </a>
+          </div>
           <div className={styles.logobar}>
             <FontAwesomeIcon className={styles.iconicon1} icon={faBars} />
             <img className={styles.misslogo} src="/logo-missota.svg" />
             <FontAwesomeIcon
-              className={styles.iconicon1}
+              className={styles.iconicon2}
               icon={faShoppingBag}
             />
           </div>
@@ -166,9 +171,9 @@ export default function Home() {
                 </span>
               </div>
             </div>
-            <div style={{ margin: "80px 0" }}>
+            <div className={styles.footerappbanner}>
               <div className={styles.categorylink}>
-                <a href="https://www.l192.com/">
+                <a href="https://l192.page.link/?link=https://www.l192.com&ibi=com.chlat.mbuy.app&apn=com.chlat.mbuy.app&isi=1105837827">
                   GET OUR LATEST PRODUCTS FROM L192.COM
                 </a>
               </div>

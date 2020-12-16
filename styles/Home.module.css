@@ -1,143 +1,19 @@
-.container {
-  text-align: center;
-  line-height: 0px;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
-.secondlayer {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-
-.piccontainer {
-  width: 50%;
-}
-
-.categorybar {
-  background-color: black;
-  width: 100%;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-}
-
-.category {
-  color: white;
-  margin: 25px 30px;
-}
-
-.category1 {
-  /* color: black; */
-  margin: 50px 30px 50px;
-  font-weight: 600;
-  font-size: smaller;
-}
-
-.productcontiner {
-  display: flex;
-  flex-direction: row;
-}
-
-.product {
-  margin: 35px 20px 0px 25px;
-  vertical-align: top;
-  display: inline-block;
-  text-align: center;
-  width: 180px;
-}
-
-.product1 {
-  margin: 35px 20px 0px 25px;
-  vertical-align: top;
-  display: inline-block;
-  text-align: center;
-}
-
-.caption {
-  display: block;
-  text-align: left;
-  line-height: 100%;
-}
-
-.misslogo {
-  width: 100px;
-  height: auto;
-  margin: 30px auto;
-}
-
-.pic {
-  margin: 1.5% 0 1.5% 0;
-  position: relative;
-}
-
-.categorylink {
-  background-color: #f1f0f0;
-  width: 1100px;
-  height: 50px;
-  justify-content: center;
-  margin: auto;
-  padding: 35px 20px;
-}
-
-.categoryfooter {
-  background-color: #f1f0f0;
-  width: 100%;
-  height: 200px;
-}
-
-.footercontainer {
-  justify-content: center;
-}
-
-.main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.iconbar {
-  display: flex;
-  justify-content: center;
-}
-
-.iconbar1 {
-  display: flex;
-  justify-content: center;
-}
-
-.iconicon {
-  width: 12px;
-  height: 12px;
-  margin: 0 20px;
-}
-
-.iconicon1 {
-  display: none;
-  width: 15px;
-  height: 15px;
-  margin: auto 50px;
-}
-
-span.d {
-  line-height: 100%;
-}
-
-.close {
-  display: none;
-}
-
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 768px) {
+  .pic img {  width: 100%;}
+  .appwrapper {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: 100%;
+    height: 56px;
+    background-color: #eee;
+    z-index: 1111111;
+  }
   .container {
     text-align: center;
     line-height: 0px;
-    width: 400px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,8 +25,187 @@ span.d {
   }
 
   .misslogo {
-    width: 20%;
+    width: 40%;
     height: auto;
+    margin: 30px 0px 30px 0px;
+  }
+
+  .secondlayer {
+    display: inline;
+  }
+
+  .categorybar {
+    display: none;
+  }
+
+  .pic {
+    margin: 1.5% 0 1.5% 0;
+    width: auto;
+  }
+
+  .pic img {
+    width: 700px;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  #rect {
+    width: 449px;
+    height: auto;
+    margin: 0px 2px 0px 0px;
+  }
+
+  #rect1 {
+    width: 250px;
+    height: 237px;
+    object-fit: cover;
+  }
+
+  .category1 {
+    margin: 10px;
+    font-weight: 600;
+    font-size: smaller;
+  }
+
+  .productcontiner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product {
+    width: 300px;
+    height: auto;
+    margin: 20px auto 0px auto;
+  }
+
+  .product img {
+    width: 300px;
+    height: auto;
+  }
+
+  .product1 img {
+    width: 300px;
+    margin: 20px auto 0px auto;
+  }
+
+  .caption {
+    display: block;
+    text-align: left;
+    line-height: 100%;
+  }
+
+  .pic {
+    /* margin: 1.5% 0 1.5% 0; */
+    position: relative;
+    width: auto;
+  }
+
+  .categorylink {
+    background-color: #f1f0f0;
+    height: 60px;
+    padding: 30px;
+    margin: 10px auto;
+    width: 90%;
+    font-weight: bold;
+  }
+
+  .categorylink a {
+    font-size: 11.5px;
+  }
+
+  .categoryfooter {
+    background-color: #f1f0f0;
+    width: 768px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    /* justify-content: center; */
+  }
+
+  .footercontainer {
+    justify-content: center;
+  }
+
+  .main {
+    padding: 5rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iconbar {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .iconbar1 {
+    display: flex;
+    flex-direction: column;
+    line-height: 100%;
+    padding: 20px 0;
+  }
+
+  .iconicon {
+    width: 12px;
+    height: 12px;
+    margin: auto 10px;
+  }
+
+  .iconicon1, .iconicon2 {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin: auto 50px;
+  }
+  .iconicon2 {display: none;}
+  
+
+  .logobar {
+    display: flex;
+    margin: 12% 0px 0px 0px;
+  }
+
+  span.d {
+    line-height: 100%;
+  }
+}
+
+
+@media screen and (max-width: 540px) {
+  .pic img {  width: 100%;}
+  .appwrapper {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: 100%;
+    height: 56px;
+    background-color: #eee;
+    z-index: 1111111;
+  }
+  .container {
+    text-align: center;
+    line-height: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .piccontainer {
+    width: 80%;
+  }
+
+  .misslogo {
+    width: 40%;
+    height: auto;
+    margin: 30px 0px 30px 0px;
   }
 
   .secondlayer {
@@ -198,6 +253,7 @@ span.d {
   .product {
     width: 300px;
     height: auto;
+    margin: 20px auto 0px auto;
   }
 
   .product img {
@@ -207,6 +263,7 @@ span.d {
 
   .product1 img {
     width: 300px;
+    margin: 20px auto 0px auto;
   }
 
   .caption {
@@ -223,17 +280,20 @@ span.d {
 
   .categorylink {
     background-color: #f1f0f0;
-    width: 300px;
-    height: 50px;
+    height: 60px;
+    padding: 30px;
+    margin: 10px auto;
+    width: 90%;
+    font-weight: bold;
   }
 
   .categorylink a {
-    font-size: 12.5px;
+    font-size: 11.5px;
   }
 
   .categoryfooter {
     background-color: #f1f0f0;
-    width: 400px;
+    width: 540px;
     height: 400px;
     margin: 0 auto;
     display: flex;
@@ -274,19 +334,1083 @@ span.d {
     margin: auto 10px;
   }
 
-  .iconicon1 {
+  .iconicon1, .iconicon2 {
     display: block;
     width: 15px;
     height: 15px;
     margin: auto 50px;
   }
+  .iconicon2 {display: none;}
+  
 
   .logobar {
     display: flex;
+    margin: 12% 0px 0px 0px;
   }
 
   span.d {
     line-height: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .pic img {  width: 100%;}
+  .appwrapper {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: 100%;
+    height: 56px;
+    background-color: #eee;
+    z-index: 1111111;
+  }
+  .container {
+    text-align: center;
+    line-height: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .piccontainer {
+    width: 80%;
+  }
+
+  .misslogo {
+    width: 40%;
+    height: auto;
+    margin: 30px 0px 30px 0px;
+  }
+
+  .secondlayer {
+    display: inline;
+  }
+
+  .categorybar {
+    display: none;
+  }
+
+  .pic {
+    margin: 1.5% 0 1.5% 0;
+    width: auto;
+  }
+
+  .pic img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  #rect {
+    width: 300px;
+    height: auto;
+    padding: 5% 0;
+  }
+
+  #rect1 {
+    width: 300px;
+    height: 430px;
+    object-fit: cover;
+  }
+
+  .category1 {
+    margin: 10px;
+    font-weight: 600;
+    font-size: smaller;
+  }
+
+  .productcontiner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product {
+    width: 300px;
+    height: auto;
+    margin: 20px auto 0px auto;
+  }
+
+  .product img {
+    width: 300px;
+    height: auto;
+  }
+
+  .product1 img {
+    width: 300px;
+    margin: 20px auto 0px auto;
+  }
+
+  .caption {
+    display: block;
+    text-align: left;
+    line-height: 100%;
+  }
+
+  .pic {
+    /* margin: 1.5% 0 1.5% 0; */
+    position: relative;
+    width: auto;
+  }
+
+  .categorylink {
+    background-color: #f1f0f0;
+    height: 60px;
+    padding: 30px;
+    margin: 10px auto;
+    width: 90%;
+    font-weight: bold;
+  }
+
+  .categorylink a {
+    font-size: 11.5px;
+  }
+
+  .categoryfooter {
+    background-color: #f1f0f0;
+    width: 480px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    /* justify-content: center; */
+  }
+
+  .footercontainer {
+    justify-content: center;
+  }
+
+  .main {
+    padding: 5rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iconbar {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .iconbar1 {
+    display: flex;
+    flex-direction: column;
+    line-height: 100%;
+    padding: 20px 0;
+  }
+
+  .iconicon {
+    width: 12px;
+    height: 12px;
+    margin: auto 10px;
+  }
+
+  .iconicon1, .iconicon2 {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin: auto 50px;
+  }
+  .iconicon2 {display: none;}
+  
+
+  .logobar {
+    display: flex;
+    margin: 12% 0px 0px 0px;
+  }
+
+  span.d {
+    line-height: 100%;
+  }
+}
+@media screen and (max-width: 414px) { 
+  .categoryfooter {
+    background-color: #f1f0f0;
+    width: 414px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    /* justify-content: center; */
+  }
+
+}
+
+
+@media screen and (max-width: 375px) {
+  .pic img {  width: 100%;}
+  .appwrapper {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: 100%;
+    height: 56px;
+    background-color: #eee;
+    z-index: 1111111;
+  }
+  .container {
+    text-align: center;
+    line-height: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .piccontainer {
+    width: 80%;
+  }
+
+  .misslogo {
+    width: 40%;
+    height: auto;
+    margin: 30px 0px 30px 0px;
+  }
+
+  .secondlayer {
+    display: inline;
+  }
+
+  .categorybar {
+    display: none;
+  }
+
+  .pic {
+    margin: 1.5% 0 1.5% 0;
+    width: auto;
+  }
+
+  .pic img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  #rect {
+    width: 300px;
+    height: auto;
+    padding: 5% 0;
+  }
+
+  #rect1 {
+    width: 300px;
+    height: 430px;
+    object-fit: cover;
+  }
+
+  .category1 {
+    margin: 10px;
+    font-weight: 600;
+    font-size: smaller;
+  }
+
+  .productcontiner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product {
+    width: 300px;
+    height: auto;
+    margin: 20px auto 0px auto;
+  }
+
+  .product img {
+    width: 300px;
+    height: auto;
+  }
+
+  .product1 img {
+    width: 300px;
+    margin: 20px auto 0px auto;
+  }
+
+  .caption {
+    display: block;
+    text-align: left;
+    line-height: 100%;
+  }
+
+  .pic {
+    /* margin: 1.5% 0 1.5% 0; */
+    position: relative;
+    width: auto;
+  }
+
+  .categorylink {
+    background-color: #f1f0f0;
+    height: 60px;
+    padding: 30px;
+    margin: 10px auto;
+    width: 90%;
+    font-weight: bold;
+  }
+
+  .categorylink a {
+    font-size: 11.5px;
+  }
+
+  .categoryfooter {
+    background-color: #f1f0f0;
+    width: 375px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    /* justify-content: center; */
+  }
+
+  .footercontainer {
+    justify-content: center;
+  }
+
+  .main {
+    padding: 5rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iconbar {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .iconbar1 {
+    display: flex;
+    flex-direction: column;
+    line-height: 100%;
+    padding: 20px 0;
+  }
+
+  .iconicon {
+    width: 12px;
+    height: 12px;
+    margin: auto 10px;
+  }
+
+  .iconicon1, .iconicon2 {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin: auto 50px;
+  }
+  .iconicon2 {display: none;}
+  
+
+  .logobar {
+    display: flex;
+    margin: 12% 0px 0px 0px;
+  }
+
+  span.d {
+    line-height: 100%;
+  }
+}
+
+
+
+@media screen and (max-width: 360px) {
+  .pic img {  width: 100%;}
+  .appwrapper {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: 100%;
+    height: 56px;
+    background-color: #eee;
+    z-index: 1111111;
+  }
+  .container {
+    text-align: center;
+    line-height: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .piccontainer {
+    width: 80%;
+  }
+
+  .misslogo {
+    width: 40%;
+    height: auto;
+    margin: 30px 0px 30px 0px;
+  }
+
+  .secondlayer {
+    display: inline;
+  }
+
+  .categorybar {
+    display: none;
+  }
+
+  .pic {
+    margin: 1.5% 0 1.5% 0;
+    width: auto;
+  }
+
+  .pic img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  #rect {
+    width: 300px;
+    height: auto;
+    padding: 5% 0;
+  }
+
+  #rect1 {
+    width: 300px;
+    height: 430px;
+    object-fit: cover;
+  }
+
+  .category1 {
+    margin: 10px;
+    font-weight: 600;
+    font-size: smaller;
+  }
+
+  .productcontiner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product {
+    width: 300px;
+    height: auto;
+    margin: 20px auto 0px auto;
+  }
+
+  .product img {
+    width: 300px;
+    height: auto;
+  }
+
+  .product1 img {
+    width: 300px;
+    margin: 20px auto 0px auto;
+  }
+
+  .caption {
+    display: block;
+    text-align: left;
+    line-height: 100%;
+  }
+
+  .pic {
+    /* margin: 1.5% 0 1.5% 0; */
+    position: relative;
+    width: auto;
+  }
+
+  .categorylink {
+    background-color: #f1f0f0;
+    height: 60px;
+    padding: 30px;
+    margin: 10px auto;
+    width: 90%;
+    font-weight: bold;
+  }
+
+  .categorylink a {
+    font-size: 11.5px;
+  }
+
+  .categoryfooter {
+    background-color: #f1f0f0;
+    width: 360px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    /* justify-content: center; */
+  }
+
+  .footercontainer {
+    justify-content: center;
+  }
+
+  .main {
+    padding: 5rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iconbar {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .iconbar1 {
+    display: flex;
+    flex-direction: column;
+    line-height: 100%;
+    padding: 20px 0;
+  }
+
+  .iconicon {
+    width: 12px;
+    height: 12px;
+    margin: auto 10px;
+  }
+
+  .iconicon1, .iconicon2 {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin: auto 50px;
+  }
+  .iconicon2 {display: none;}
+  
+
+  .logobar {
+    display: flex;
+    margin: 12% 0px 0px 0px;
+  }
+
+  span.d {
+    line-height: 100%;
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+  .pic img {  width: 100%;}
+  .appwrapper {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: 100%;
+    height: 56px;
+    background-color: #eee;
+    z-index: 1111111;
+  }
+  .container {
+    text-align: center;
+    line-height: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .piccontainer {
+    width: 80%;
+  }
+
+  .misslogo {
+    width: 40%;
+    height: auto;
+    margin: 30px 0px 30px 0px;
+  }
+
+  .secondlayer {
+    display: inline;
+  }
+
+  .categorybar {
+    display: none;
+  }
+
+  .pic {
+    margin: 1.5% 0 1.5% 0;
+    width: auto;
+  }
+
+  .pic img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  #rect {
+    width: 300px;
+    height: auto;
+    padding: 5% 0;
+  }
+
+  #rect1 {
+    width: 300px;
+    height: 430px;
+    object-fit: cover;
+  }
+
+  .category1 {
+    margin: 10px;
+    font-weight: 600;
+    font-size: smaller;
+  }
+
+  .productcontiner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product {
+    width: 300px;
+    height: auto;
+    margin: 20px auto 0px auto;
+  }
+
+  .product img {
+    width: 300px;
+    height: auto;
+  }
+
+  .product1 img {
+    width: 300px;
+    margin: 20px auto 0px auto;
+  }
+
+  .caption {
+    display: block;
+    text-align: left;
+    line-height: 100%;
+  }
+
+  .pic {
+    /* margin: 1.5% 0 1.5% 0; */
+    position: relative;
+    width: auto;
+  }
+
+  .categorylink {
+    background-color: #f1f0f0;
+    height: 60px;
+    padding: 30px;
+    margin: 10px auto;
+    width: 90%;
+    font-weight: bold;
+  }
+
+  .categorylink a {
+    font-size: 10px;
+  }
+
+  .categoryfooter {
+    background-color: #f1f0f0;
+    width: 320px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    /* justify-content: center; */
+  }
+
+  .footercontainer {
+    justify-content: center;
+  }
+
+  .main {
+    padding: 5rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iconbar {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .iconbar1 {
+    display: flex;
+    flex-direction: column;
+    line-height: 100%;
+    padding: 20px 0;
+  }
+
+  .iconicon {
+    width: 12px;
+    height: 12px;
+    margin: auto 10px;
+  }
+
+  .iconicon1, .iconicon2 {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin: auto 50px;
+  }
+  .iconicon2 {display: none;}
+  
+
+  .logobar {
+    display: flex;
+    margin: 12% 0px 0px 0px;
+  }
+
+  span.d {
+    line-height: 100%;
+  }
+}
+
+
+@media screen and (max-width: 280px) {
+  .pic img {  width: 100%;}
+  .appwrapper img {width: 280px !important;}
+  .appwrapper {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: 100%;
+    height: 56px;
+    background-color: #eee;
+    z-index: 1111111;
+  }
+  .container {
+    text-align: center;
+    line-height: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .piccontainer {
+    width: 80%;
+  }
+
+  .misslogo {
+    width: 40%;
+    height: auto;
+    margin: 30px 0px 30px 0px;
+  }
+
+  .secondlayer {
+    display: inline;
+  }
+
+  .categorybar {
+    display: none;
+  }
+
+  .pic {
+    margin: 1.5% 0 1.5% 0;
+    width: auto;
+  }
+
+  .pic img {
+    width: 270px;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  #rect {
+    width: 270px;
+    height: auto;
+    padding: 5% 0;
+  }
+
+  #rect1 {
+    width: 270px;
+    height: 430px;
+    object-fit: cover;
+  }
+
+  .category1 {
+    margin: 10px;
+    font-weight: 600;
+    font-size: smaller;
+  }
+
+  .productcontiner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product {
+    width: 270px;
+    height: auto;
+    margin: 20px auto 0px auto;
+  }
+
+  .product img {
+    width: 270px;
+    height: auto;
+  }
+
+  .product1 img {
+    width: 270px;
+    margin: 20px auto 0px auto;
+  }
+
+  .caption {
+    display: block;
+    text-align: left;
+    line-height: 100%;
+  }
+
+  .pic {
+    /* margin: 1.5% 0 1.5% 0; */
+    position: relative;
+    width: auto;
+  }
+
+  .categorylink {
+    background-color: #f1f0f0;
+    height: 60px;
+    padding: 30px;
+    margin: 10px auto;
+    width: 90%;
+    font-weight: bold;
+  }
+
+  .categorylink a {
+    font-size: 8.8px;
+  }
+
+  .categoryfooter {
+    background-color: #f1f0f0;
+    width: 280px;
+    height: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    /* justify-content: center; */
+  }
+
+  .footercontainer {
+    justify-content: center;
+  }
+
+  .main {
+    padding: 5rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iconbar {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .iconbar1 {
+    display: flex;
+    flex-direction: column;
+    line-height: 100%;
+    padding: 20px 0;
+  }
+
+  .iconicon {
+    width: 12px;
+    height: 12px;
+    margin: auto 10px;
+  }
+
+  .iconicon1, .iconicon2 {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin: auto 50px;
+  }
+  .iconicon2 {display: none;}
+  
+
+  .logobar {
+    display: flex;
+    margin: 12% 0px 0px 0px;
+  }
+
+  span.d {
+    line-height: 100%;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  
+  .pic img {
+    width: 1024px;
+    height: 400px;
+    object-fit: cover;
+  }
+  .container {
+    text-align: center;
+    line-height: 0px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .secondlayer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  .secondlayer img {width: 450px;}
+  .piccontainer {
+    width: 50%;
+  }
+
+  
+  #rect {
+    width: 724px;
+    height: auto;
+    margin: 0px 5px 0px 0px;
+  }
+
+  #rect1 {
+    width: 300px;
+    height: 382px;
+    object-fit: cover;
+  }
+  .categorybar {
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .category {
+    color: white;
+    margin: 25px 30px;
+  }
+
+  .category1 {
+    /* color: black; */
+    margin: 50px 30px 50px;
+    font-weight: 600;
+    font-size: smaller;
+  }
+
+  .productcontiner {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .product {
+    margin: 35px 14px 0px 10px;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 180px;
+  }
+  .product1 {
+    margin: 35px 4px 0px 4px;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+  }
+  .caption {
+    display: block;
+    text-align: left;
+    line-height: 100%;
+  }
+
+  .misslogo {
+    width: 100px;
+    height: auto;
+    margin: 30px auto;
+  }
+
+  .pic {
+    margin: 1.5% 0 1.5% 0;
+    position: relative; 
+  }
+
+
+  .categorylink {
+    background-color: #f1f0f0;
+    width: 800px;
+    height: 50px;
+    justify-content: center;
+    margin: auto;
+    padding: 35px 20px;
+    margin: 40px auto;
+  }
+
+  .categoryfooter {
+    background-color: #f1f0f0;
+    width: 100%;
+    min-height: 150px;
+    margin: 30px 0px 0px 0px;
+  }
+
+  .footercontainer {
+    justify-content: center;
+  }
+
+  .main {
+    padding: 5rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .iconbar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .iconbar1 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .iconicon {
+    width: 12px;
+    height: 12px;
+    margin: 0 20px;
+  }
+
+  .iconicon1, .iconicon2 {
+    display: none;
+    width: 15px;
+    height: 15px;
+    margin: auto 50px;
+  }
+
+  span.d {
+    line-height: 100%;
+  }
+
+  .close,.appwrapper {
+    display: none;
   }
 }
 
@@ -313,3 +1437,5 @@ span.d {
   color: white;
   font-size: smaller;
 }
+
+.footerappbanner { height: 80px;  }
