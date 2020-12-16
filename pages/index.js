@@ -71,7 +71,8 @@ export default function Home() {
             </div>
             <div className={styles.productcontainer}>
               <div className={styles.product}>
-                <img src="/product1.jpg" />
+                <img src="/product1.jpg" srcSet="product1-300.jpg 300w, /product1.jpg 1200w" sizes="(min-width: 180px) 300px, 100vw" alt="Include productname as alternative text" />
+                
                 <span className={styles.caption}>
                   <p style={{ color: "#F08080" }}>
                     <b>Elegant, Women</b>
@@ -83,7 +84,7 @@ export default function Home() {
                 </span>
               </div>
               <div className={styles.product}>
-                <img src="/product2.jpg" />
+                <img src="/product2.jpg" srcSet="product2-300.jpg 300w, /product2.jpg 1200w" sizes="(min-width: 180px) 300px, 100vw" alt="Include productname as alternative text" />
                 <span className={styles.caption}>
                   <p style={{ color: "#F08080" }}>
                     <b>Clothes, Dresses, Elegant, Women</b>
@@ -95,7 +96,7 @@ export default function Home() {
                 </span>
               </div>
               <div className={styles.product}>
-                <img src="/product3.jpg" />
+                <img src="/product3.jpg" srcSet="product3-300.jpg 300w, /product3.jpg 1200w" sizes="(min-width: 180px) 300px, 100vw" alt="Include productname as alternative text" />
                 <span className={styles.caption}>
                   <p style={{ color: "#F08080" }}>
                     <b>Elegant, Women</b>
@@ -107,7 +108,7 @@ export default function Home() {
                 </span>
               </div>
               <div className={styles.product}>
-                <img src="/product4.jpg" />
+                <img src="/product4.jpg" srcSet="product4-300.jpg 300w, /product4.jpg 1200w" sizes="(min-width: 180px) 300px, 100vw" alt="Include productname as alternative text" />
                 <span className={styles.caption}>
                   <p style={{ color: "#F08080" }}>
                     <b>Elegant, Women</b>
@@ -119,7 +120,7 @@ export default function Home() {
                 </span>
               </div>
               <div className={styles.product}>
-                <img src="/product5.jpg" />
+                <img src="/product5.jpg"  srcSet="product5-300.jpg 300w,  /product5.jpg 1200w" sizes="(min-width: 180px) 300px, 100vw" alt="Include productname as alternative text" />
                 <span className={styles.caption}>
                   <p style={{ color: "#F08080" }}>
                     <b>Elegant, Women</b>
@@ -205,20 +206,9 @@ export default function Home() {
                 </a>
               </div>
               <div className={styles.iconbar}>
-                <FontAwesomeIcon
-                  className={styles.iconicon}
-                  icon={faInstagram}
-                />
+                <FontAwesomeIcon className={styles.iconicon} icon={faInstagram} />
                 <FontAwesomeIcon className={styles.iconicon} icon={faTwitter} />
-                <FontAwesomeIcon
-                  className={styles.iconicon}
-                  icon={faFacebookF}
-                />
-                <FontAwesomeIcon
-                  className={styles.iconicon}
-                  icon={faPinterestP}
-                />
-                <FontAwesomeIcon className={styles.iconicon} icon={faTumblr} />
+                <FontAwesomeIcon className={styles.iconicon} icon={faFacebookF} />
               </div>
             </div>
           </footer>
