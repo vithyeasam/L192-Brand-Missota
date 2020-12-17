@@ -9,7 +9,6 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faBars, faShoppingBag } from "@fortawesome/free-solid-svg-icons";
-// import ProductHomepage from "./components/homepage";
 
 export default function Home() {
   return (
@@ -61,123 +60,13 @@ export default function Home() {
               JACKETS
             </a>
           </div>
-          <div>            
-          <div className={styles.container}>
-        <div className={styles.pic}>
-          <img src="/intro-model.jpg" />
-        </div>
-        <div className={styles.secondlayer}>
-          <img id={styles.rect} src="/left-model1.jpg" />
+          <div>
+            <div className={styles.pic}>
+              <img src="/intro-model.jpg" />
+            </div>
+            <div className={styles.secondlayer}>
+              <img id={styles.rect} src="/left-model1.jpg" />
 
-          <img id={styles.rect1} src="/right-model1.jpg" />
-        </div>
-        <div className={styles.productcontainer}>
-          <div className={styles.product}>
-            <img src="/product1.jpg" />
-            <span className={styles.caption}>
-              <p style={{ color: "#F08080" }}>
-                <b>Elegant, Women</b>
-              </p>
-              <p>Gold Ring</p>
-              <p>
-                <b>$345.00</b>
-              </p>
-            </span>
-          </div>
-          <div className={styles.product}>
-            <img src="/product2.jpg" />
-            <span className={styles.caption}>
-              <p style={{ color: "#F08080" }}>
-                <b>Clothes, Dresses, Elegant, Women</b>
-              </p>
-              <p>Pastel Dress</p>
-              <p>
-                <b>$215.00</b>
-              </p>
-            </span>
-          </div>
-          <div className={styles.product}>
-            <img src="/product3.jpg" />
-            <span className={styles.caption}>
-              <p style={{ color: "#F08080" }}>
-                <b>Elegant, Women</b>
-              </p>
-              <p>Gold Ring</p>
-              <p>
-                <b>$345.00</b>
-              </p>
-            </span>
-          </div>
-          <div className={styles.product}>
-            <img src="/product4.jpg" />
-            <span className={styles.caption}>
-              <p style={{ color: "#F08080" }}>
-                <b>Elegant, Women</b>
-              </p>
-              <p>Gold Ring</p>
-              <p>
-                <b>$345.00</b>
-              </p>
-            </span>
-          </div>
-          <div className={styles.product}>
-            <img src="/product5.jpg" />
-            <span className={styles.caption}>
-              <p style={{ color: "#F08080" }}>
-                <b>Elegant, Women</b>
-              </p>
-              <p>Gold Ring</p>
-              <p>
-                <b>$345.00</b>
-              </p>
-            </span>
-          </div>
-        </div>
-        <div>
-          <div className={styles.product1}>
-            <img src="/category1.jpg" />
-          </div>
-          <div className={styles.product1}>
-            <img src="/category2.jpg" />
-          </div>
-          <div className={styles.product1}>
-            <img src="/category3.jpg" />
-          </div>
-        </div>
-        <div>
-          <div className={styles.product1}>
-            <img src="/category4.jpg" />
-            <span className={styles.d}>
-              <h2>
-                <b>DRESSES</b>
-              </h2>
-              <p>New color dresses for every occasion</p>
-            </span>
-          </div>
-          <div className={styles.product1}>
-            <img src="/category5.jpg" />
-            <span className={styles.d}>
-              <h2>
-                <b>SHOES</b>
-              </h2>
-              <p>New color shoes for every occasion</p>
-            </span>
-          </div>
-          <div className={styles.product1}>
-            <img src="/category6.jpg" />
-            <span className={styles.d}>
-              <h2>
-                <b>ACCESSORIES</b>
-              </h2>
-              <p>New color accessories for every occasion</p>
-            </span>
-          </div>
-        </div>
-      </div>
-
-<<<<<<< HEAD
-            <div style={{ margin: "80px 0" }}>
-=======
               <img id={styles.rect1} src="/right-model1.jpg" />
             </div>
             <div className={styles.productcontainer}>
@@ -283,7 +172,6 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.footerappbanner}>
->>>>>>> 2f88a92c8ed34195bc0189912def1a7300973ca4
               <div className={styles.categorylink}>
                 <a href="https://l192.page.link/?link=https://www.l192.com&ibi=com.chlat.mbuy.app&apn=com.chlat.mbuy.app&isi=1105837827">
                   GET OUR LATEST PRODUCTS FROM L192.COM
@@ -322,9 +210,6 @@ export default function Home() {
                 <FontAwesomeIcon className={styles.iconicon} icon={faFacebookF} />
               </div>
             </div>
-            <div className={styles.copyrightlayer}>
-                <p>Copyright Elated Themes</p>
-              </div>
           </footer>
         </div>
       </main>
