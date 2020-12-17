@@ -21,11 +21,16 @@ export default function Home() {
 
       <main>
         <div className={styles.container}>
+          <div className={styles.appwrapper}>
+            <a href="https://l192.page.link/?link=https://www.l192.com&ibi=com.chlat.mbuy.app&apn=com.chlat.mbuy.app&isi=1105837827">
+              <img className={styles.appbanner} src="/bannerapp.png" />
+            </a>
+          </div>
           <div className={styles.logobar}>
             <FontAwesomeIcon className={styles.iconicon1} icon={faBars} />
             <img className={styles.misslogo} src="/logo-missota.svg" />
             <FontAwesomeIcon
-              className={styles.iconicon1}
+              className={styles.iconicon2}
               icon={faShoppingBag}
             />
           </div>
@@ -170,7 +175,115 @@ export default function Home() {
         </div>
       </div>
 
+<<<<<<< HEAD
             <div style={{ margin: "80px 0" }}>
+=======
+              <img id={styles.rect1} src="/right-model1.jpg" />
+            </div>
+            <div className={styles.productcontainer}>
+              <div className={styles.product}>
+                <img src="/product1.jpg" srcSet="product1-300.jpg 300w, /product1.jpg 750w" sizes="(max-width: 300px) 300px,(min-width: 1024px) 210px, 100vw" alt="Include productname as alternative text" />                  
+                <span className={styles.caption}>
+                  <p style={{ color: "#F08080" }}>
+                    <b>Elegant, Women</b>
+                  </p>
+                  <p>Gold Ring</p>
+                  <p>
+                    <b>$345.00</b>
+                  </p>
+                </span>
+              </div>
+              <div className={styles.product}>
+                <img src="/product2.jpg" srcSet="product2-300.jpg 300w, /product2.jpg 750w" sizes="(max-width: 300px) 300px,(min-width: 1024px) 210px, 100vw" alt="Include productname as alternative text" />
+                <span className={styles.caption}>
+                  <p style={{ color: "#F08080" }}>
+                    <b>Clothes, Dresses, Elegant, Women</b>
+                  </p>
+                  <p>Pastel Dress</p>
+                  <p>
+                    <b>$215.00</b>
+                  </p>
+                </span>
+              </div>
+              <div className={styles.product}>
+                <img src="/product3.jpg" srcSet="product3-300.jpg 300w, /product3.jpg 750w" sizes="(max-width: 300px) 300px,(min-width: 1024px) 210px, 100vw" alt="Include productname as alternative text" />
+                <span className={styles.caption}>
+                  <p style={{ color: "#F08080" }}>
+                    <b>Elegant, Women</b>
+                  </p>
+                  <p>Gold Ring</p>
+                  <p>
+                    <b>$345.00</b>
+                  </p>
+                </span>
+              </div>
+              <div className={styles.product}>
+                <img src="/product4.jpg" srcSet="product4-300.jpg 300w, /product4.jpg 750w" sizes="(max-width: 300px) 300px,(min-width: 1024px) 210px, 100vw" alt="Include productname as alternative text" />
+                <span className={styles.caption}>
+                  <p style={{ color: "#F08080" }}>
+                    <b>Elegant, Women</b>
+                  </p>
+                  <p>Gold Ring</p>
+                  <p>
+                    <b>$345.00</b>
+                  </p>
+                </span>
+              </div>
+              <div className={styles.product}>
+                <img src="/product5.jpg"  srcSet="product5-300.jpg 300w,  /product5.jpg 750w" sizes="(max-width: 300px) 300px,(min-width: 1024px) 210px, 100vw" alt="Include productname as alternative text" />
+                <span className={styles.caption}>
+                  <p style={{ color: "#F08080" }}>
+                    <b>Elegant, Women</b>
+                  </p>
+                  <p>Gold Ring</p>
+                  <p>
+                    <b>$345.00</b>
+                  </p>
+                </span>
+              </div>
+            </div>
+            <div>
+              <div className={styles.product1}>
+                <img src="/category1.jpg" />
+              </div>
+              <div className={styles.product1}>
+                <img src="/category2.jpg" />
+              </div>
+              <div className={styles.product1}>
+                <img src="/category3.jpg" />
+              </div>
+            </div>
+            <div>
+              <div className={styles.product1}>
+                <img src="/category4.jpg" />
+                <span className={styles.d}>
+                  <h2>
+                    <b>DRESSES</b>
+                  </h2>
+                  <p>New color dresses for every occasion</p>
+                </span>
+              </div>
+              <div className={styles.product1}>
+                <img src="/category5.jpg" />
+                <span className={styles.d}>
+                  <h2>
+                    <b>SHOES</b>
+                  </h2>
+                  <p>New color shoes for every occasion</p>
+                </span>
+              </div>
+              <div className={styles.product1}>
+                <img src="/category6.jpg" />
+                <span className={styles.d}>
+                  <h2>
+                    <b>ACCESSORIES</b>
+                  </h2>
+                  <p>New color accessories for every occasion</p>
+                </span>
+              </div>
+            </div>
+            <div className={styles.footerappbanner}>
+>>>>>>> 2f88a92c8ed34195bc0189912def1a7300973ca4
               <div className={styles.categorylink}>
                 <a href="https://l192.page.link/?link=https://www.l192.com&ibi=com.chlat.mbuy.app&apn=com.chlat.mbuy.app&isi=1105837827">
                   GET OUR LATEST PRODUCTS FROM L192.COM
@@ -204,20 +317,9 @@ export default function Home() {
                 </a>
               </div>
               <div className={styles.iconbar}>
-                <FontAwesomeIcon
-                  className={styles.iconicon}
-                  icon={faInstagram}
-                />
+                <FontAwesomeIcon className={styles.iconicon} icon={faInstagram} />
                 <FontAwesomeIcon className={styles.iconicon} icon={faTwitter} />
-                <FontAwesomeIcon
-                  className={styles.iconicon}
-                  icon={faFacebookF}
-                />
-                <FontAwesomeIcon
-                  className={styles.iconicon}
-                  icon={faPinterestP}
-                />
-                <FontAwesomeIcon className={styles.iconicon} icon={faTumblr} />
+                <FontAwesomeIcon className={styles.iconicon} icon={faFacebookF} />
               </div>
             </div>
             <div className={styles.copyrightlayer}>
