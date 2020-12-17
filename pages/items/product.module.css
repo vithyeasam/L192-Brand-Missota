@@ -13,10 +13,6 @@
   align-items: center;
 }
 
-.piccontainer {
-  width: 50%;
-}
-
 .categorybar {
   background-color: black;
   width: 100%;
@@ -40,14 +36,20 @@
 .productcontiner {
   display: flex;
   flex-direction: row;
+  width: 50%;
 }
 
 .product {
-  margin: 35px 20px 0px 25px;
+  margin: 35px 30px 0px 30px;
   vertical-align: top;
   display: inline-block;
-  text-align: center;
-  width: 180px;
+  /* text-align: center; */
+}
+
+.product img {
+  width: 240px;
+  height: 340px;
+  object-fit: cover;
 }
 
 .product1 {
@@ -64,23 +66,36 @@
 }
 
 .misslogo {
-  width: 100px;
+  width: 300px;
   height: auto;
-  margin: 30px auto;
+  margin: 20px auto;
 }
 
 .pic {
   margin: 1.5% 0 1.5% 0;
-  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pic img {
+  margin: 0.5% 0 0.5% 0;
+  padding: 0 20px;
+  width: 600px;
+  height: auto;
 }
 
 .categorylink {
   background-color: #f1f0f0;
-  width: 1100px;
+  width: 1200px;
   height: 50px;
   justify-content: center;
   margin: auto;
   padding: 35px 20px;
+}
+
+.categorylink a {
+  font-size: 30px;
 }
 
 .categoryfooter {
@@ -109,7 +124,9 @@
 
 .iconbar1 {
   display: flex;
-  justify-content: center;
+  align-items: baseline;
+  padding-top: 30px;
+  /* justify-content: center; */
 }
 
 .iconicon {
@@ -143,6 +160,179 @@ span.d {
   font-size: smaller;
 }
 
+.shopbar {
+  position: relative;
+}
+.shopbar img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.shopbar div {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+}
+
+.detailcontainer {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  width: 1200px;
+  margin: 0 auto;
+  /* align-items: center; */
+}
+
+.detail {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  /* margin: 0; */
+  top: 5%;
+}
+
+.detail h1 {
+  font-size: 30px;
+  padding-top: 30px;
+}
+
+.underlinetext {
+  position: relative;
+  padding-bottom: 10px;
+  display: inline;
+}
+
+.underlinetext::before {
+  position: absolute;
+  height: 5px;
+  content: "";
+  width: 100%;
+  background-color: #df8688;
+  bottom: 0;
+}
+
+h2.underlinetext {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.textp {
+  width: 100%;
+  display: block;
+  text-align: left;
+  line-height: 200%;
+  padding: 30px 0 0 0;
+}
+
+.ratingstar {
+  display: flex;
+  padding: 10px 0 50px;
+  /* align-items: center; */
+}
+
+.ratingstar img {
+  width: 25px;
+  padding-right: 5px;
+  height: auto;
+}
+
+hr.new3 {
+  border-top: 1px dotted black;
+  width: 50px;
+  position: absolute;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.productdetail {
+  display: flex;
+  align-items: baseline;
+  padding-bottom: 30px;
+  height: 10px;
+}
+
+.productdetail1 {
+  display: flex;
+  align-items: baseline;
+  padding-top: 50px;
+}
+
+.clickedlink {
+  color: #2b83c3;
+  padding: 5px 0;
+  font-size: 15px;
+  font-style: bold;
+  font-weight: 500;
+}
+
+.button {
+  background-color: white;
+  border: 1px solid rgb(204, 204, 204);
+  color: black;
+  border-radius: 4px;
+  padding: 0px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  height: 50px;
+  line-height: 50%;
+}
+
+.buttonnone {
+  background-color: rgb(233, 233, 233);
+  border: 1px solid rgb(204, 204, 204);
+  color: black;
+  border-radius: 4px;
+  padding: 0px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  height: 50px;
+  line-height: 50%;
+}
+
+.button:hover {
+  border: 1px solid orange;
+}
+
+.fontSize {
+  font-size: 20px;
+}
+
+.underlined {
+  text-decoration: underline;
+  padding: 0 5px;
+  font-weight: bold;
+  line-height: 200%;
+}
+
+.shoptop {
+  width: 1200px;
+  margin-left: -600px;
+  font-weight: bold;
+  font-size: 30px;
+  position: fixed;
+}
+
+.dotv {
+  display: flex;
+  height: 10px;
+  content: "";
+  position: relative;
+  border-left: 1px dotted #444;
+}
+
+#linethrough {
+  text-decoration: line-through;
+  text-decoration-color: #df8688;
+  padding-right: 10px;
+}
+
 @media screen and (max-width: 400px) {
   .container {
     text-align: center;
@@ -152,10 +342,6 @@ span.d {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-
-  .piccontainer {
-    width: 80%;
   }
 
   .misslogo {
@@ -306,7 +492,6 @@ span.d {
 }
 
 /* .copyrightlayer {
-  display: block;
   background-color: black;
   width: 400px;
   height: 60px;
