@@ -1,5 +1,7 @@
 @media screen and (max-width: 768px) {
-  .pic img {  width: 100%;}
+  .pic img {
+    width: 100%;
+  }
   .appwrapper {
     position: fixed;
     top: 0px;
@@ -151,14 +153,16 @@
     margin: auto 10px;
   }
 
-  .iconicon1, .iconicon2 {
+  .iconicon1,
+  .iconicon2 {
     display: block;
     width: 15px;
     height: 15px;
     margin: auto 50px;
   }
-  .iconicon2 {display: none;}
-  
+  .iconicon2 {
+    display: none;
+  }
 
   .logobar {
     display: flex;
@@ -170,9 +174,10 @@
   }
 }
 
-
 @media screen and (max-width: 540px) {
-  .pic img {  width: 100%;}
+  .pic img {
+    width: 100%;
+  }
   .appwrapper {
     position: fixed;
     top: 0px;
@@ -324,14 +329,16 @@
     margin: auto 10px;
   }
 
-  .iconicon1, .iconicon2 {
+  .iconicon1,
+  .iconicon2 {
     display: block;
     width: 15px;
     height: 15px;
     margin: auto 50px;
   }
-  .iconicon2 {display: none;}
-  
+  .iconicon2 {
+    display: none;
+  }
 
   .logobar {
     display: flex;
@@ -344,7 +351,9 @@
 }
 
 @media screen and (max-width: 480px) {
-  .pic img {  width: 100%;}
+  .pic img {
+    width: 100%;
+  }
   .appwrapper {
     position: fixed;
     top: 0px;
@@ -496,14 +505,16 @@
     margin: auto 10px;
   }
 
-  .iconicon1, .iconicon2 {
+  .iconicon1,
+  .iconicon2 {
     display: block;
     width: 15px;
     height: 15px;
     margin: auto 50px;
   }
-  .iconicon2 {display: none;}
-  
+  .iconicon2 {
+    display: none;
+  }
 
   .logobar {
     display: flex;
@@ -514,7 +525,7 @@
     line-height: 100%;
   }
 }
-@media screen and (max-width: 414px) { 
+@media screen and (max-width: 414px) {
   .categoryfooter {
     background-color: #f1f0f0;
     width: 414px;
@@ -525,12 +536,12 @@
     align-content: center;
     /* justify-content: center; */
   }
-
 }
 
-
 @media screen and (max-width: 375px) {
-  .pic img {  width: 100%;}
+  .pic img {
+    width: 100%;
+  }
   .appwrapper {
     position: fixed;
     top: 0px;
@@ -682,14 +693,16 @@
     margin: auto 10px;
   }
 
-  .iconicon1, .iconicon2 {
+  .iconicon1,
+  .iconicon2 {
     display: block;
     width: 15px;
     height: 15px;
     margin: auto 50px;
   }
-  .iconicon2 {display: none;}
-  
+  .iconicon2 {
+    display: none;
+  }
 
   .logobar {
     display: flex;
@@ -701,10 +714,10 @@
   }
 }
 
-
-
 @media screen and (max-width: 360px) {
-  .pic img {  width: 100%;}
+  .pic img {
+    width: 100%;
+  }
   .appwrapper {
     position: fixed;
     top: 0px;
@@ -856,14 +869,16 @@
     margin: auto 10px;
   }
 
-  .iconicon1, .iconicon2 {
+  .iconicon1,
+  .iconicon2 {
     display: block;
     width: 15px;
     height: 15px;
     margin: auto 50px;
   }
-  .iconicon2 {display: none;}
-  
+  .iconicon2 {
+    display: none;
+  }
 
   .logobar {
     display: flex;
@@ -875,9 +890,10 @@
   }
 }
 
-
 @media screen and (max-width: 320px) {
-  .pic img {  width: 100%;}
+  .pic img {
+    width: 100%;
+  }
   .appwrapper {
     position: fixed;
     top: 0px;
@@ -888,7 +904,9 @@
     background-color: #eee;
     z-index: 1111111;
   }
-  .appwrapper img {width: 320px;}
+  .appwrapper img {
+    width: 320px;
+  }
   .container {
     text-align: center;
     line-height: 0px;
@@ -1030,14 +1048,16 @@
     margin: auto 10px;
   }
 
-  .iconicon1, .iconicon2 {
+  .iconicon1,
+  .iconicon2 {
     display: block;
     width: 15px;
     height: 15px;
     margin: auto 50px;
   }
-  .iconicon2 {display: none;}
-  
+  .iconicon2 {
+    display: none;
+  }
 
   .logobar {
     display: flex;
@@ -1049,10 +1069,13 @@
   }
 }
 
-
 @media screen and (max-width: 280px) {
-  .pic img {  width: 100%;}
-  .appwrapper img {width: 280px !important;}
+  .pic img {
+    width: 100%;
+  }
+  .appwrapper img {
+    width: 280px !important;
+  }
   .appwrapper {
     position: fixed;
     top: 0px;
@@ -1204,14 +1227,16 @@
     margin: auto 10px;
   }
 
-  .iconicon1, .iconicon2 {
+  .iconicon1,
+  .iconicon2 {
     display: block;
     width: 15px;
     height: 15px;
     margin: auto 50px;
   }
-  .iconicon2 {display: none;}
-  
+  .iconicon2 {
+    display: none;
+  }
 
   .logobar {
     display: flex;
@@ -1222,8 +1247,10 @@
     line-height: 100%;
   }
 }
-@media screen and (min-width: 769px) and (max-width:1023px) { 
-  .pic img {  width: 100%;}
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .pic img {
+    width: 100%;
+  }
   .appwrapper {
     position: fixed;
     top: 0px;
@@ -1375,14 +1402,16 @@
     margin: auto 10px;
   }
 
-  .iconicon1, .iconicon2 {
+  .iconicon1,
+  .iconicon2 {
     display: block;
     width: 15px;
     height: 15px;
     margin: auto 50px;
   }
-  .iconicon2 {display: none;}
-  
+  .iconicon2 {
+    display: none;
+  }
 
   .logobar {
     display: flex;
@@ -1395,7 +1424,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-  
   .pic img {
     width: 1024px;
     height: 400px;
@@ -1415,12 +1443,13 @@
     align-content: center;
     align-items: center;
   }
-  .secondlayer img {width: 450px;}
+  .secondlayer img {
+    width: 450px;
+  }
   .piccontainer {
     width: 50%;
   }
 
-  
   #rect {
     width: 724px;
     height: auto;
@@ -1457,16 +1486,17 @@
     flex-direction: row;
     width: 1024px;
     margin: 0 auto;
+    overflow-x: scroll;
   }
 
   .product {
-    margin: 35px 10px 0px 15px;
+    margin: 35px 20px 0px 10px;
     vertical-align: top;
     display: inline-block;
     text-align: center;
     width: 185px;
   }
- 
+
   .product1 {
     margin: 35px 4px 0px 4px;
     vertical-align: top;
@@ -1479,6 +1509,22 @@
     line-height: 100%;
     font-size: 0.9em;
     width: 175px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  #b1 {
+    overflow: hidden;
+    /* min-height: 39px; */
+    margin: 0;
+    padding-top: 5px;
+    /* font-size: 0.775rem; */
+    font-weight: bold;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
   }
 
   .misslogo {
@@ -1489,9 +1535,8 @@
 
   .pic {
     margin: 1.5% 0 1.5% 0;
-    position: relative; 
+    position: relative;
   }
-
 
   .categorylink {
     background-color: #f1f0f0;
@@ -1539,7 +1584,8 @@
     margin: 0 20px;
   }
 
-  .iconicon1, .iconicon2 {
+  .iconicon1,
+  .iconicon2 {
     display: none;
     width: 15px;
     height: 15px;
@@ -1550,7 +1596,8 @@
     line-height: 100%;
   }
 
-  .close,.appwrapper {
+  .close,
+  .appwrapper {
     display: none;
   }
 }
@@ -1579,4 +1626,20 @@
   font-size: smaller;
 }
 
-.footerappbanner { height: 80px;  }
+.footerappbanner {
+  height: 80px;
+}
+
+#linethrough {
+  text-decoration: line-through;
+  text-decoration-color: #df8688;
+  padding-right: 10px;
+  /* font-weight: bold; */
+}
+
+.textoverflow {
+  width: 100px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: visible;
+}

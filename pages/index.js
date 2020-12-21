@@ -9,8 +9,127 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faBars, faShoppingBag } from "@fortawesome/free-solid-svg-icons";
+import { useQuery } from "@apollo/client";
+import gql from "graphql-tag";
+
+const HELLO_QUERY = gql`
+  query hello_query {
+    productSearch(filter: { brandId: 262 }, offset: 0, limit: 30) {
+      items {
+        id
+        title
+        picture
+        price
+        price_before_discount
+      }
+    }
+  }
+`;
+
+// var button = document.getElementById('slide');
+// button.onclick = function () {
+//     var container = document.getElementById('container');
+//     sideScroll(container,'right',25,100,10);
+// };
+
+// var back = document.getElementById('slideBack');
+// back.onclick = function () {
+//     var container = document.getElementById('container');
+//     sideScroll(container,'left',25,100,10);
+// };
+
+// function sideScroll(element,direction,speed,distance,step){
+//     scrollAmount = 0;
+//     var slideTimer = setInterval(function(){
+//         if(direction == 'left'){
+//             element.scrollLeft -= step;
+//         } else {
+//             element.scrollLeft += step;
+//         }
+//         scrollAmount += step;
+//         if(scrollAmount >= distance){
+//             window.clearInterval(slideTimer);
+//         }
+//     }, speed);
+// }
+
+// function showProduct(d) {
+//   console.log(d);
+
+//   if (loading) return <div>Hello</div>;
+//   if (error) return <p>ERROR</p>;
+//   if (!data) return <p>Not found</p>;
+
+//   return (
+//     <div>
+//       {data.productSearch &&
+//         data.productSearch.items &&
+//         data.productSearch.items.map(launch => (
+//           // <LaunchTile key={launch.id} launch={launch} />
+//           <div>{launch.picture}</div>
+//         ))}
+//     </div>
+//   );
+// };
+
+function smaller(d) {
+  var c = d.toString().replace("w=350,h=490", "w=180,h=252")
+  return c
+}
+
+function bigger(d) {
+  var c = d.toString().replace("w=350,h=490", "w=750,h=1050")
+  console.log(c);
+  return c
+}
+
+const Launches = () => {
+  const { data, loading, error } = useQuery(HELLO_QUERY);
+
+  if (loading) return <div>Hello</div>;
+  if (error) return <p>ERROR</p>;
+  if (!data) return <p>Not found</p>;
+
+  // console.log(data.productSearch.items.map((child) => 
+  // child.picture));
+
+  const img = "https://s5.kh1.co/__image/w=350,h=490,fit=contain/1f/1f25fdb17923776d201d850ae2a936f17d793f1d.jpg";
+
+  return (
+    <div className={styles.productcontainer}>
+      {data.productSearch &&
+        data.productSearch.items &&
+        data.productSearch.items.map((launch) => (
+          // <LaunchTile key={launch.id} launch={launch} />
+          // <div>{launch.picture}</div>
+          <div className={styles.product} key={launch.id}>
+            {/* {smaller(launch.picture)} */}
+            <img
+              src={launch.picture?.toString() || ""}
+              // srcSet="product1-300.jpg 300w, /product1.jpg 750w"
+              srcSet={`${smaller(launch.picture)} 300w, ${bigger(launch.picture)} 750w`}
+              sizes="(max-width: 300px) 300px,(min-width: 1024px) 210px, 100vw"
+              alt="Include productname as alternative text"
+            />
+            <span className={styles.caption}>
+              <p style={{ color: "#F08080" }}>
+                <b id={styles.b1}>{launch.title ?  launch.title : 'No Title'}</b>
+              </p>
+              <p>Gold Ring</p>
+              <p>
+                <b id={styles.linethrough}>${launch.price_before_discount}</b>
+                <b>${launch.price}</b>
+              </p>
+            </span>
+          </div>
+        ))}
+    </div>
+  );
+};
 
 export default function Home() {
+  // const { data } = useQuery(HELLO_QUERY);
+
   return (
     <div>
       <Head>
@@ -19,6 +138,7 @@ export default function Home() {
       </Head>
 
       <main>
+        {/* <div>{Launches()}</div> */}
         <div className={styles.container}>
           <div className={styles.appwrapper}>
             <a href="https://l192.page.link/?link=https://www.l192.com&ibi=com.chlat.mbuy.app&apn=com.chlat.mbuy.app&isi=1105837827">
@@ -69,68 +189,11 @@ export default function Home() {
 
               <img id={styles.rect1} src="/right-model1.jpg" />
             </div>
-            <div className={styles.productcontainer}>
-              <div className={styles.product}>
-                <img src="/product1.jpg" srcSet="product1-300.jpg 300w, /product1.jpg 750w" sizes="(max-width: 300px) 300px,(min-width: 1024px) 210px, 100vw" alt="Include productname as alternative text" />                  
-                <span className={styles.caption}>
-                  <p style={{ color: "#F08080" }}>
-                    <b>Elegant, Women</b>
-                  </p>
-                  <p>Gold Ring</p>
-                  <p>
-                    <b>$345.00</b>
-                  </p>
-                </span>
-              </div>
-              <div className={styles.product}>
-                <img src="/product2.jpg" srcSet="product2-300.jpg 300w, /product2.jpg 750w" sizes="(max-width: 300px) 300px,(min-width: 1024px) 210px, 100vw" alt="Include productname as alternative text" />
-                <span className={styles.caption}>
-                  <p style={{ color: "#F08080" }}>
-                    <b>Clothes, Dresses, Elegant, Women</b>
-                  </p>
-                  <p>Pastel Dress</p>
-                  <p>
-                    <b>$215.00</b>
-                  </p>
-                </span>
-              </div>
-              <div className={styles.product}>
-                <img src="/product3.jpg" srcSet="product3-300.jpg 300w, /product3.jpg 750w" sizes="(max-width: 300px) 300px,(min-width: 1024px) 210px, 100vw" alt="Include productname as alternative text" />
-                <span className={styles.caption}>
-                  <p style={{ color: "#F08080" }}>
-                    <b>Elegant, Women</b>
-                  </p>
-                  <p>Gold Ring</p>
-                  <p>
-                    <b>$345.00</b>
-                  </p>
-                </span>
-              </div>
-              <div className={styles.product}>
-                <img src="/product4.jpg" srcSet="product4-300.jpg 300w, /product4.jpg 750w" sizes="(max-width: 300px) 300px,(min-width: 1024px) 210px, 100vw" alt="Include productname as alternative text" />
-                <span className={styles.caption}>
-                  <p style={{ color: "#F08080" }}>
-                    <b>Elegant, Women</b>
-                  </p>
-                  <p>Gold Ring</p>
-                  <p>
-                    <b>$345.00</b>
-                  </p>
-                </span>
-              </div>
-              <div className={styles.product}>
-                <img src="/product5.jpg"  srcSet="product5-300.jpg 300w,  /product5.jpg 750w" sizes="(max-width: 300px) 300px,(min-width: 1024px) 210px, 100vw" alt="Include productname as alternative text" />
-                <span className={styles.caption}>
-                  <p style={{ color: "#F08080" }}>
-                    <b>Elegant, Women</b>
-                  </p>
-                  <p>Gold Ring</p>
-                  <p>
-                    <b>$345.00</b>
-                  </p>
-                </span>
-              </div>
-            </div>
+            {/* <div className={styles.productcontainer}> */}
+
+            {Launches()}
+
+            {/* </div> */}
             <div>
               <div className={styles.product1}>
                 <img src="/category1.jpg" />
@@ -205,9 +268,15 @@ export default function Home() {
                 </a>
               </div>
               <div className={styles.iconbar}>
-                <FontAwesomeIcon className={styles.iconicon} icon={faInstagram} />
+                <FontAwesomeIcon
+                  className={styles.iconicon}
+                  icon={faInstagram}
+                />
                 <FontAwesomeIcon className={styles.iconicon} icon={faTwitter} />
-                <FontAwesomeIcon className={styles.iconicon} icon={faFacebookF} />
+                <FontAwesomeIcon
+                  className={styles.iconicon}
+                  icon={faFacebookF}
+                />
               </div>
             </div>
           </footer>
