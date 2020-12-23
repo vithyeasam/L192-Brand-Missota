@@ -11,6 +11,7 @@ import {
 import { faBars, faShoppingBag } from "@fortawesome/free-solid-svg-icons";
 import { useQuery } from "@apollo/client";
 import gql from "graphql-tag";
+import Link from "next/link";
 
 const HELLO_QUERY = gql`
   query hello_query {
@@ -25,33 +26,6 @@ const HELLO_QUERY = gql`
     }
   }
 `;
-
-// var button = document.getElementById('slide');
-// button.onclick = function () {
-//     var container = document.getElementById('container');
-//     sideScroll(container,'right',25,100,10);
-// };
-
-// var back = document.getElementById('slideBack');
-// back.onclick = function () {
-//     var container = document.getElementById('container');
-//     sideScroll(container,'left',25,100,10);
-// };
-
-// function sideScroll(element,direction,speed,distance,step){
-//     scrollAmount = 0;
-//     var slideTimer = setInterval(function(){
-//         if(direction == 'left'){
-//             element.scrollLeft -= step;
-//         } else {
-//             element.scrollLeft += step;
-//         }
-//         scrollAmount += step;
-//         if(scrollAmount >= distance){
-//             window.clearInterval(slideTimer);
-//         }
-//     }, speed);
-// }
 
 // function showProduct(d) {
 //   console.log(d);
@@ -72,15 +46,19 @@ const HELLO_QUERY = gql`
 //   );
 // };
 
+function shoot() {
+  alert("Great Shot!");
+}
+
 function smaller(d) {
-  var c = d.toString().replace("w=350,h=490", "w=180,h=252")
-  return c
+  var c = d.toString().replace("w=350,h=490", "w=180,h=252");
+  return c;
 }
 
 function bigger(d) {
-  var c = d.toString().replace("w=350,h=490", "w=750,h=1050")
+  var c = d.toString().replace("w=350,h=490", "w=750,h=1050");
   console.log(c);
-  return c
+  return c;
 }
 
 const Launches = () => {
@@ -90,12 +68,16 @@ const Launches = () => {
   if (error) return <p>ERROR</p>;
   if (!data) return <p>Not found</p>;
 
-  // console.log(data.productSearch.items.map((child) => 
+  // console.log(data.productSearch.items.map((child) =>
   // child.picture));
 
-  const img = "https://s5.kh1.co/__image/w=350,h=490,fit=contain/1f/1f25fdb17923776d201d850ae2a936f17d793f1d.jpg";
+  const img =
+    "https://s5.kh1.co/__image/w=350,h=490,fit=contain/1f/1f25fdb17923776d201d850ae2a936f17d793f1d.jpg";
+
+  console.log(data)
 
   return (
+    
     <div className={styles.productcontainer}>
       {data.productSearch &&
         data.productSearch.items &&
@@ -104,16 +86,20 @@ const Launches = () => {
           // <div>{launch.picture}</div>
           <div className={styles.product} key={launch.id}>
             {/* {smaller(launch.picture)} */}
+            <Link href={`/items/${launch.id}`}>
+            <a>
             <img
               src={launch.picture?.toString() || ""}
               // srcSet="product1-300.jpg 300w, /product1.jpg 750w"
-              srcSet={`${smaller(launch.picture)} 300w, ${bigger(launch.picture)} 750w`}
+              srcSet={`${smaller(launch.picture)} 300w, ${bigger(
+                launch.picture
+              )} 750w`}
               sizes="(max-width: 300px) 300px,(min-width: 1024px) 210px, 100vw"
               alt="Include productname as alternative text"
             />
             <span className={styles.caption}>
               <p style={{ color: "#F08080" }}>
-                <b id={styles.b1}>{launch.title ?  launch.title : 'No Title'}</b>
+                <b id={styles.b1}>{launch.title ? launch.title : "No Title"}</b>
               </p>
               <p>Gold Ring</p>
               <p>
@@ -121,6 +107,8 @@ const Launches = () => {
                 <b>${launch.price}</b>
               </p>
             </span>
+            </a>
+            </Link>
           </div>
         ))}
     </div>
@@ -147,7 +135,7 @@ export default function Home() {
           </div>
           <div className={styles.logobar}>
             <FontAwesomeIcon className={styles.iconicon1} icon={faBars} />
-            <img className={styles.misslogo} src="/logo-missota.svg" />
+            <a href="/"><img className={styles.misslogo} src="/logo-missota.svg" /></a>         
             <FontAwesomeIcon
               className={styles.iconicon2}
               icon={faShoppingBag}

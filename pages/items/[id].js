@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "../items/product.module.css";
+import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -10,8 +11,106 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { faBars, faShoppingBag } from "@fortawesome/free-solid-svg-icons";
+import { useQuery } from "@apollo/client";
+import gql from "graphql-tag";
+import { useState } from "react";
+
+const HELLO_QUERY = gql`
+  query PromoCodeAnalytic($id: Int!) {
+    displayProduct(id: $id) {
+      id
+      price
+      priceBeforeDiscount
+      code
+      descriptionHTML
+    }
+    displayProductOption(id: $id) {
+      defaultColor
+      defaultSize
+      colorList {
+        value
+        sizeList {
+          value
+        }
+      }
+    }
+    displayProductMediaList(id: $id) {
+      src
+      width
+      height
+      type
+    }
+  }
+`;
+
+function renderPrice(data) {
+  const displayProduct = data.displayProduct;
+  if (displayProduct.price == displayProduct.priceBeforeDiscount) {
+    return (
+      <h2>
+        {/* <span id={styles.linethrough}>
+          ${data.displayProduct.priceBeforeDiscount}
+        </span> */}
+        ${displayProduct.price}
+      </h2>
+    );
+  } else {
+    return (
+      <h2>
+        <span id={styles.linethrough}>
+          ${displayProduct.priceBeforeDiscount}
+        </span>
+        ${displayProduct.price}
+      </h2>
+    );
+  }
+}
+
+
+function RenderColorSize(data) {
+  const colors = data.displayProductOption.colorList;
+  const [sizes, setSize] = useState([]);
+  if (!colors || colors.length === 0) {
+  }
+  return (
+    <div>
+      <p className={styles.clickedlink}>Color [?]</p>
+      {colors.map((color, index) => (
+        <button
+          className={styles.button}
+          key={index}
+          onClick={() => setSize(color.sizeList)}
+        >
+          <p>{color.value}</p>
+          <p style={{ color: "#006602" }}>1 in stock</p>
+        </button>
+      ))}
+      <p className={styles.clickedlink}>Size [?]</p>
+      {sizes.map((size, index) => (
+        <button className={styles.button} type="button" key={index}>
+          <p>{size.value}</p>
+          <p style={{ color: "#006602" }}>1 in stock</p>
+        </button>
+      ))}
+    </div>
+  );
+}
 
 export default function ProductPage() {
+  const router = useRouter();
+  const { id } = router.query;
+  const { data, loading, error } = useQuery(HELLO_QUERY, {
+    variables: { id: Number(id) },
+  });
+
+  console.log(Number(id));
+
+  if (loading) return <div>Hello</div>;
+  if (error) return <p>ERROR</p>;
+  if (!data) return <p>Not found</p>;
+
+  console.log(data);
+
   return (
     <div>
       <Head>
@@ -23,7 +122,9 @@ export default function ProductPage() {
         <div className={styles.container}>
           <div className={styles.logobar}>
             <FontAwesomeIcon className={styles.iconicon1} icon={faBars} />
-            <img className={styles.misslogo} src="/logo-missota.svg" />
+            <a href="/">
+              <img className={styles.misslogo} src="/logo-missota.svg" />
+            </a>
             <FontAwesomeIcon
               className={styles.iconicon1}
               icon={faShoppingBag}
@@ -63,13 +164,23 @@ export default function ProductPage() {
           <div>
             <div className={styles.detailcontainer}>
               <div className={styles.pic}>
-                <img src="/category2.jpg" />
-
-                <img src="/category3.jpg" />
+                {data.displayProductMediaList.map((launch, index) => (
+                  <img key={index} src={launch.src} />
+                ))}
               </div>
               <div className={styles.detail}>
                 <h1>ROUND BAG</h1>
-                <h2 id={styles.fontsize}>$75.00</h2>
+                {renderPrice(data)}
+                {/* <h2>
+                  {" "}
+                  <span id={styles.linethrough}>
+                    ${data.displayProduct.priceBeforeDiscount}
+                  </span>
+                  ${data.displayProduct.price}
+                </h2> */}
+                {/* <h2 id={styles.fontsize}>
+                  ${data.displayProduct.price}
+                </h2> */}
                 <div className={styles.ratingstar}>
                   <img src="/star.svg" />
                   <img src="/star.svg" />
@@ -107,17 +218,26 @@ export default function ProductPage() {
                 </div>
                 <div className={styles.productdetail1}>
                   <p>Dimensions: </p>
-                  <h4>150x25.00x35.00 (cm)</h4>
+                  <h4>
+                    {data.displayProductMediaList[0].width}x
+                    {data.displayProductMediaList[0].height}(cm)
+                  </h4>
                 </div>
-                <div>
-                  <p className={styles.clickedlink}>Color [?]</p>
+                {/* {showColorList(data)}
+                  {showSizeList(data)} */}
+                <RenderColorSize {...data} />
+                {/* {data.displayProductOption.colorList.map((child, index) => (
+                    <button className={styles.button}>
+                      <p>{child.value}</p>
+                      <p style={{ color: "#006602" }}>1 in stock</p>
+                    </button>
+                  ))} */}
+                {/* <p className={styles.clickedlink}>Color [?]</p>
                   <button className={styles.button}>
                     <p>LIGHT PINK</p>
                     <p style={{ color: "#006602" }}>1 in stock</p>
-                  </button>
-                </div>
-                <div>
-                  <p className={styles.clickedlink}>Size [?]</p>
+                  </button> */}
+                {/* <div>
                   <button className={styles.button} type="button">
                     <p>S</p>
                     <p style={{ color: "#006602" }}>1 in stock</p>
@@ -130,7 +250,7 @@ export default function ProductPage() {
                     <p>L</p>
                     <p style={{ color: "#fe0000" }}>no stock</p>
                   </button>
-                </div>
+                </div> */}
                 <div>
                   <p>FREE Delivery in Phnom Penh</p>
                   <p>
@@ -167,6 +287,7 @@ export default function ProductPage() {
                 </div>
               </div>
             </div>
+
             <h2>RELATED PRODUCTS</h2>
             {/* <div className={styles.secondlayer}>
             </div> */}
